@@ -22,5 +22,7 @@ server.post("/", job.postNewJob);
 server.get("/", (req, res) => {
   return res.render("home");
 });
+// Route to handle job applications
+server.post("/job/:id/apply", job.applyForJob);
 
 server.listen(3400);

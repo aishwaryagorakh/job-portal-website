@@ -43,6 +43,9 @@ export default class JobModal {
     );
     Jobs.push(newJob);
   }
+  static findById(id) {
+    return this.Jobs.find((job) => job.id === id);
+  }
 }
 
 var Jobs = [
