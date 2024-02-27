@@ -1,0 +1,56 @@
+
+
+     
+     <% Jobs.forEach(job => {%>
+      
+          <h2>JOB PROFILE</h2>
+          <div class="card-row">
+            <span>ID</span>
+            <span>:<%= job.id %></span>
+          </div>
+          <div class="card-row">
+            <span>Job Category:</span>
+            <span>:<%=job.jobcategry %></span>
+          </div>
+          <div class="card-row">
+            <span>Job Designation:</span>
+            <span><%=job.jobdesignation %></span>
+          </div>
+          <div class="card-row">
+            <span>Job Location:</span>
+            <span><%=job.joblocation%></span>
+          </div>
+          <div class="card-row">
+            <span>Company Name:</span>
+            <span><%= job.companyname  %></span>
+          </div>
+          <div class="card-row">
+            <span>Salary:</span>
+            <span><%= job.salary  %></span>
+          </div>
+          <div class="card-row">
+            <span>Apply By:</span>
+            <span><%= job.applyby  %></span>
+          </div>
+          <div class="card-row">
+            <span>Skill Required:</span>
+            <span><%= job.skillrequire %></span>
+          </div>
+          <div class="card-row">
+            <span>Number of Openings:</span>
+            <span><%= job.numberofopening  %></span>
+          </div>
+          <div class="card-row">
+            <span>Job Posted:</span>
+            <span><%= job.jobposted %></span>
+          </div>
+          <div class="card-row">
+            <span>Applicants:</span>
+            <span><%= job.applicants  %></span>
+          </div>
+          <button type="button" class="btn btn-success"> Apply Now</button>
+       
+     
+   
+   <% }); %>
+ 
