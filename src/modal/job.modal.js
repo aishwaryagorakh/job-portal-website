@@ -39,12 +39,20 @@ export default class JobModal {
       productObj.skillrequire,
       productObj.numberofopening,
       productObj.jobposted,
-      productObj.applicants
+      0
     );
     Jobs.push(newJob);
   }
-  static findById(id) {
-    return this.Jobs.find((job) => job.id === id);
+  static getById(id) {
+    return Jobs.find((p) => p.id == id);
+  }
+
+  static increaseApplicants(id) {
+    const job = Jobs.find((job) => job.id === id);
+    console.log("Increasing applicants for job with ID:", id);
+    if (job) {
+      job.applicants++;
+    }
   }
 }
 
